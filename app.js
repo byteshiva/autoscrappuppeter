@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 
 (async () => {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({headless: false});
     const page = await browser.newPage();
 
     await page.goto("https://www.tnpds.gov.in/home.xhtml");
@@ -57,5 +57,6 @@ const puppeteer = require('puppeteer');
         await element.click();
         await promise;
     }
+    await page.screenshot({ path: 'screenshot_00001.png', fullPage: true, omitBackground: false });
     await browser.close();
 })();
