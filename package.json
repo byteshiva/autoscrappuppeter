@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "nodemailer": "6.7.3",
+    "nodemailer": "10.0.9",
     "puppeteer": "13.5.1"
   }
 }
